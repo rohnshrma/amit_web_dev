@@ -1,0 +1,567 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #3f3a64;
+}
+h5 {
+  color: #20ad96;
+}
+*.row {
+  margin: 0;
+}
+
+hr{
+  width:90%;
+  margin: auto;
+}
+
+.main-btn{
+  padding:10px 20px;
+  color:#fff;
+  background-color: #20ad96;
+}
+
+.main-btn-light{
+  padding:10px 20px;
+  color:#3f3a64;
+  background-color: #fff;
+}
+/* =============================   NAVBAR    ============================================== */
+.navbar{
+  padding:1% 10%; 
+}
+.navbar span{
+  margin-left: 20px;
+}
+
+.navbar .nav-item{
+  margin: 0 10px;
+}
+
+
+/* ======================================================================================== */
+.main-section {
+  margin-top: 70px;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./university.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position:center;
+}
+
+.main-section .row {
+display: flex;
+justify-content: center;
+align-items: center;
+  padding: 12% 15%;
+  text-align: center;
+  color: white;
+}
+
+.main-section .row h1 {
+  color:#fff;
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+.main-section .row h5{
+  color:#fff;
+}
+.main-section .main-btn,
+.main-section .main-btn-light{
+  margin-top: 10px;
+  margin-right: 20px;
+  transition:0.5s;
+}
+.main-section .main-btn:hover,
+.main-section .main-btn-light:hover{
+  color:#fff;
+
+  background-color: dodgerblue;
+}
+
+/* .abt-sec{
+    padding:5% 10%;
+}
+.abt-sec .box-img img{
+    width:100%;
+} */
+
+.features {
+  position: relative;
+  text-align: center;
+  padding: 5% 10%;
+}
+.feature-title h5 {
+  color: #20ad96;
+}
+.feature-title h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.feature-box {
+  padding: 20px 30px;
+  transition: 0.5s;
+}
+.feature-box:hover {
+  box-shadow:0px 0px 5px 2px #ccc;
+  border-radius: 10px;
+  /* border:5px dotted #20ad96; */
+}
+.feature-box:hover h4 {
+  color: #20ad96;
+}
+.feature-title {
+  margin-bottom: 50px;
+}
+.features i {
+  position: relative;
+  font-size: 80px;
+  margin-bottom: 20px;
+  color: #20ad96;
+  transition: 0.5s;
+}
+.feature-box:hover i {
+  transform: rotate(-15deg) scale(0.9);
+}
+.features h4 {
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+/* =========================================THE POPULAR COURSES SECTION=============== */
+
+.section-title{
+  margin-bottom: 80px;
+  text-align: center;
+}
+.section-title h5 {
+  color: #20ad96;
+}
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.pop-courses{
+  padding:5% 15%;
+  text-align: left;
+  background: #F7F5F4;
+}
+.pop-courses h6{
+  color:#20ad96;  
+}
+/* .feature-title{
+  margin-bottom: 30px;
+} */
+.course-icon{
+  margin-left: 20px;
+}
+.card-text{
+  color:gray;
+}
+.card{
+  transition: 0.3s;
+}
+.card:hover {
+  
+box-shadow: 0px 0px 20px 5px #dcdcdc;
+}
+
+
+.course-all-row{
+  margin-top: 80px;
+  text-align: center;
+  padding:0 10%;
+}
+.course-all-row span a{
+  color:#20ad96;
+  text-decoration: underline;
+}
+/* ==================================================================================== */
+
+/* =========================================THE BANNER SECTION========================== */
+
+.banner {
+  padding: 5% 10%;
+}
+.banner-title {
+  margin-bottom: 50px;
+}
+.banner-details {
+  padding: 5%;
+}
+.banner-feature {
+  margin-bottom: 10px;
+}
+
+.banner-icon {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px #ccc;
+  text-align: center;
+}
+.banner-icon i {
+  padding: 20px;
+  font-size: 50px;
+  color: #20ad96;
+}
+.banner-f-det {
+  padding-top: 10px;
+}
+.banner-img {
+  padding: 5%;
+}
+.banner-img img {
+  width: 100%;
+}
+
+/* ===================================================================================== */
+
+
+
+/* ==================================================score section====================== */
+.score{
+    padding:5% 10%;
+}
+.score-title{
+    margin-bottom: 80px;
+}
+.score-title h5{
+    font-size: 1rem;
+}
+.score-title h2{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.score h3{
+    font-size: 3.5rem;
+    font-weight: 700;
+    color:#20ad96;
+}
+.score h3 span{
+    color:#3f3a64;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+.score-features{
+    /* text-align: center; */
+}
+.score-features h5{
+    color:#3f3a64;
+}
+/* ===================================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================BLOG============================================= */
+
+.blog{
+  padding:5% 15%;
+  text-align: center;
+}
+/* .feature-title{
+  margin-bottom: 30px;
+} */
+.author{
+  color:#20ad96;
+  margin-right: 20px;
+}
+.card-text{
+  color:gray;
+}
+.card{
+  transition: 0.3s;
+}
+.card:hover {
+  
+box-shadow: 0px 0px 20px 5px #dcdcdc;
+}
+/* ========================================================================================= */
+
+
+
+/*============= SIGN UP ============*/
+.sign-form{
+  padding:5% 10%;
+}
+.sign-form .row{
+  background: #F7F5F4;
+  padding:5%;
+}
+.sign-form .form-item h6{
+  color:#20ad96;
+  }
+  .sign-form  .form-item h1{
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  .sign-form .form-group input[type=text]{
+    padding: 20px;
+    background: #fff;
+    border:none;
+    outline:transparent;
+    /* margin-left: px; */
+  }
+
+  .form-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sign-form form{
+    border:1px solid #20ad96;
+    border-radius: 8px;
+    width:100%;
+    overflow: hidden;
+    background: #fff;
+  }
+  .sign-form .form-btn{
+    background: #20ad96;
+    color:#fff;
+    float: right;
+    padding:16px 40px;
+    outline: hidden;
+    margin-top: 3px;
+    margin-right: 3px;
+  }
+
+/* ----------------------------------------------------------------------------------------- */
+
+
+/* LOCATION */
+
+.location .col-lg-12{
+  height:350px;
+  padding:0;
+}
+
+  /*  */
+
+/* =============================================FOOTER SECTION =============================*/
+
+footer{
+  background:#EBF4F8;
+}
+footer .footer-row{
+  padding:5% 10%; 
+}
+footer h2{
+  font-size: 2.5rem !important;
+}
+footer p{
+  color:gray;
+  line-height: 2;
+  padding:0 100px 0 0;
+}
+footer ul {
+  margin-top: 15px;
+list-style-type: none;
+}
+
+footer i{
+  color:gray;
+  transition: 0.5s;
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+footer i:hover{
+  color:#20ad96;
+}
+
+footer ul li {
+  margin-bottom: 15px;
+  }
+  footer ul li a{
+    font-weight: 600;
+  }
+
+  .copyright{
+    padding:0 10%;
+  }
+.copyright span{
+  color:#20ad96;
+}
+
+.page-link{
+  padding:0;
+  background:#EBF4F8;
+  border:none;
+}
+.page-link:hover{
+  background: #EBF4F8;
+}
+.page-link span{
+  color:#3f3a64;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0 20px;
+}
+.page-link span a{
+  color:#3f3a64;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.page-link span:hover a{
+color:#20ad96;
+}
+/* ========================================================================================= */
+
+
+
+/* ==========================================================MEDIA QUERIES ==========================================================*/
+
+@media (max-width:768px){
+::placeholder{
+  text-align: center;
+}
+.navbar .navbar-toggler-icon{
+  margin: 0;
+}
+.navbar .social-icons{
+  display: none;
+}
+  /* MAIN SECTION */
+  .main-section{
+    margin-top: 40px;
+  }
+  .main-section .row {
+    padding:10% 5%;
+    min-height:100vh;
+  }
+  .main-section .row h1 {
+    font-size: 3.5rem;
+  }
+  .main-section .main-btn,
+.main-section .main-btn-light{
+  margin-top: 10px;
+  margin-right: 0;
+  transition:0.5s;
+}
+/* ================= */
+
+/* FEATURES */
+.features{
+padding:10% 5%;
+}
+.features i{
+  font-size: 3rem;
+}
+/* ================= */
+
+/* POPULAR COURSES */
+.pop-courses{
+  padding:10% 5%;
+}
+.pop-courses .card{
+  margin-bottom: 30px;
+}
+.pop-courses .course-all-row{
+  margin-top: 30px;
+}
+/* =============== */
+
+/* BANNER */
+.banner{
+  text-align: center;
+  padding: 10% 5%;
+}
+.banner-icon{
+  margin:20px 100px;
+}
+/* ====== */
+
+/*Score Section*/
+.score{
+  padding:10% 5%;
+  text-align: center;
+}
+.score h2{
+  font-size: 2.5rem;
+}
+.score-feature{
+  margin-bottom: 30px;
+}
+.score h3{
+  font-size: 2.5rem;
+}
+/* ========== */
+
+
+/* BLOG */
+.blog{
+  padding:10% 5%;
+}
+.blog-card{
+  margin-bottom: 30px;
+}
+/* ==== */
+
+
+/* sign form */
+.sign-form .form-group input[type=text]{
+  width:100%;
+}
+.sign-form .btn{
+  width:100%;
+  margin:0;
+}
+/*  */
+
+/* FOOTER */
+footer{
+  padding:10% 5% 0;
+  text-align: center !important;
+}
+footer .col-lg-6{
+  margin-bottom: 30px;
+}
+footer .col-lg-2{
+  margin-bottom: 30px;
+}
+footer p{
+  padding:0;
+}
+footer .footer-row{
+  padding:0;
+}
+.page-link{
+  display: none;
+}
+.copyright .col-lg-6{
+  margin-bottom: 0;
+}
+.copyright p{
+  padding:10% 5%;
+  margin-bottom: 0;
+}
+/* ====== */
+}
+
+/* ================================================================================================================================== */
+
+
