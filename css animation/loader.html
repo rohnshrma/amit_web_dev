@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Center the loader */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a1a;
+            margin: 0;
+        }
+
+        /* Loader container */
+        .loader {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            perspective: 800px;
+        }
+
+        /* Cube styling */
+        .cube {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            animation: rotate 4s infinite linear;
+        }
+
+        /* Cube faces */
+        .face {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: rgba(0, 255, 200, 0.1);
+            border: 2px solid #00ffc8;
+            box-shadow: 0 0 20px rgba(0, 255, 200, 0.5);
+        }
+
+        /* Position each face */
+        .front {
+            transform: translateZ(40px);
+        }
+
+        .back {
+            transform: rotateY(180deg) translateZ(40px);
+        }
+
+        .right {
+            transform: rotateY(90deg) translateZ(40px);
+        }
+
+        .left {
+            transform: rotateY(-90deg) translateZ(40px);
+        }
+
+        .top {
+            transform: rotateX(90deg) translateZ(40px);
+        }
+
+        .bottom {
+            transform: rotateX(-90deg) translateZ(40px);
+        }
+
+        /* Glow effect */
+        .loader::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #00ffc8;
+            filter: blur(30px);
+            opacity: 0.3;
+            animation: pulse 2s infinite;
+        }
+
+        /* Animations */
+        @keyframes rotate {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+        }
+
+        /* Loading text */
+        .loading-text {
+            position: absolute;
+            bottom: -40px;
+            width: 100%;
+            text-align: center;
+            color: #00ffc8;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            animation: textPulse 2s infinite;
+        }
+
+        @keyframes textPulse {
+            0% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="cube">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
+        <div class="loading-text">Loading...</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML INTRODUCTION</title>
+    <style>
+        form {
+            margin: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- headings -->
+    <h1>Hello world</h1>
+    <h2>Hello world</h2>
+    <h3>Hello world</h3>
+    <h4>Hello world</h4>
+    <h5>Hello world</h5>
+    <h6>Hello world</h6>
+
+    <!-- paragraphs -->
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, voluptas.</p>
+
+    <!-- lists : 1. Ordered List , 2. Unordered List, 3. Descriptive List -->
+
+    <!-- ordered list : ol | list item : li -->
+    <ol>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+    </ol>
+
+    <!-- unordered list : ul | list item : li -->
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+    </ul>
+
+
+    <!-- descriptive list : dl -->
+    <dl>
+        <!-- dt : descriptive term -->
+        <dt>Apple</dt>
+        <!-- dd : descriptive details -->
+        <dd>Red In Color</dd>
+
+        <dt>Banana</dt>
+        <dd>Yellow in color</dd>
+    </dl>
+
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Class</th>
+        </tr>
+        <tr>
+            <td>Amit</td>
+            <td>20</td>
+            <td>Male</td>
+            <td>12th</td>
+        </tr>
+        <tr>
+            <td>Amitabh</td>
+            <td>15</td>
+            <td>Male</td>
+            <td>11th</td>
+        </tr>
+    </table>
+
+
+
+    <!-- hyperlinks : anchor : a (href="destination address") (link) -->
+
+    <!-- go to another website -->
+    <a href="https://www.google.com">Google</a>
+
+    <!-- go to another page of same website of our own -->
+    <a href="about.html">About Us</a>
+
+    <!-- Make the user call you -->
+    <a href="tel:+918766367815">Call Me</a>
+
+    <!-- Make the user call you -->
+    <a href="https://api.whatsapp.com/send/?phone=%2B918766367815&text&type=phone_number&app_absent=0">Whatsapp Me</a>
+
+
+    <form>
+        <label for="full_name">Full <b>Name</b> : </label>
+        <input type="text" id="full_name" placeholder="Name Goes here..." name="full_name" />
+        <br />
+        <label for="email_address">Email Address : </label>
+        <input type="email" id="email_address" placeholder="Email Address here..." name="email_address" />
+        <br />
+        <label for="pass">Password : </label>
+        <input type="password" id="pass" placeholder="Password Goes here..." name="password" />
+        <br />
+        <label for="mob">Mobile : </label>
+        <input type="tel" id="mob" placeholder="Mobile..." name="mobile" />
+        <br />
+
+        Gender :
+
+        <input type="radio" name="gender" id="m" value="Male">
+        <label for="m">Male</label>
+        <input type="radio" name="gender" id="f" value="Female">
+        <label for="f">Female</label>
+        <input type="radio" name="gender" id="o" value="Others">
+        <label for="o">Others</label>
+        <br />
+        Skills :
+        <input checked type="checkbox" name="skills" id="html" value="html">
+        <label for="html">HTML</label>
+        <input type="checkbox" name="skills" id="css" value="css">
+        <label for="css">CSS</label>
+        <input type="checkbox" name="skills" id="js" value="javascript">
+        <label for="js">JAVASCRIPT</label>
+
+        <!-- <input type="submit" value="SUBMIT"> -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+
+    </form>
+
+
+</body>
+
+</html>

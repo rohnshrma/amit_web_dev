@@ -1,0 +1,33 @@
+#parent {
+  display: flex;
+  /* manage horizontal space */
+
+  /* justify-content: center; */
+  /* justify-content: end; */
+  /* justify-content: space-around; */
+  justify-content: space-evenly;
+  /* justify-content: space-between; */
+
+  /* manage vertical space */
+
+  align-items: center;
+
+  height: 300px;
+  padding: 16px;
+  background-color: #ccc;
+}
+
+.child {
+  border: 2px inset #000;
+  height: 100px;
+}
+
+.c1 {
+  width: 20%;
+}
+.c2 {
+  width: 40%;
+}
+.c3 {
+  width: 20%;
+}

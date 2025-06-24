@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: Sacramento;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Poppins;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.txt-shadow {
+  text-shadow: -2px -2px 0 #ccc;
+}
+
+.img-shadow {
+  filter: drop-shadow(-2px -2px 0 #333);
+}
+
+#main {
+  color: teal;
+  position: relative;
+  background: linear-gradient(190deg, rgb(236, 186, 124) 10%, #def0f8 70%);
+  text-align: center;
+}
+
+#main h1 {
+  font-size: 84px;
+}
+
+#main h4 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+#main .cloud {
+  width: 300px;
+}
+
+#main .c1 {
+  top: 100px;
+  position: relative;
+  left: 500px;
+}
+#main .c2 {
+  position: absolute;
+  bottom: 300px;
+  left: 100px;
+}
+
+#main .mountain {
+  width: 800px;
+}

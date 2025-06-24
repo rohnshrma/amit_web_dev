@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+#parent {
+  background-color: #ccc;
+  height: 500px;
+  width: 500px;
+  position: relative;
+}
+
+.box {
+  font-size: 48px;
+  text-align: center;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+}
+
+.b1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: wheat;
+}
+.b2 {
+  background-color: teal;
+}
+.b3 {
+  background-color: tomato;
+}

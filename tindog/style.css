@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Poppins;
+}
+
+.btn {
+  padding: 10px 12px;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+  border-color: transparent;
+  font-family: Poppins;
+  letter-spacing: 1px;
+}
+
+.btn-white {
+  border: 1px solid #000;
+  background-color: transparent;
+}
+.btn-black {
+  background-color: #333;
+  color: #fff;
+}
+
+p {
+  font-family: sans-serif;
+  color: #595959;
+}
+
+.level-2 {
+  color: rgb(230, 120, 139);
+  font-size: 3rem;
+  font-weight: 500;
+  text-shadow: -2px -2px 2px #333;
+  margin-bottom: 2rem;
+}
+
+.level-3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.wrapper {
+  text-align: center;
+  /* 1rem : 16px */
+  padding: 4rem 8rem;
+}
+
+#header {
+  padding: 4rem 8rem 0;
+  height: 80vh;
+  overflow: hidden;
+  background: linear-gradient(rgb(230, 120, 139), rgb(188, 81, 99));
+}
+/* header */
+#header #nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header #nav ul {
+  display: flex;
+  list-style: none;
+}
+#header #nav ul a {
+  color: #fff;
+  margin-left: 2rem;
+
+  font-family: poppins;
+  text-decoration: none;
+}
+#header #nav .logo {
+  font-family: ubuntu;
+  font-size: 3rem;
+  color: #fff;
+}
+#header #main {
+  padding-top: 4rem;
+  color: #fff;
+  display: flex;
+}
+#header #main .content-bx {
+  width: 50%;
+}
+#header #main .content-bx h1 {
+  font-size: 4rem;
+}
+#header #main .img-bx {
+  width: 60%;
+}
+#header #main .img-bx img {
+  width: 50%;
+  filter: drop-shadow(-4px -4px 4px #000);
+  transform: rotate(25deg);
+  position: relative;
+  left: 150px;
+}
+
+#header .btn {
+  font-size: 1rem;
+  font-weight: 500;
+  width: 200px;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+}
+#header .btn-white {
+  color: #fff;
+  border-color: white;
+}
+
+/* features */
+
+#features .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+#features .feature {
+  width: 30%;
+  transition: 0.3s;
+}
+
+#features .feature:hover i {
+  color: rgb(211, 90, 110);
+  text-shadow: -2px -2px 2px #333;
+}
+#features .feature:hover {
+  transform: scale(1.1);
+}
+
+#features .feature i {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: rgb(230, 120, 139);
+}
+
+/* brands */
+#brands {
+  background-color: #e5778a;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#brands .img-bx {
+  width: 22%;
+}
+#brands .img-bx:hover img {
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+#brands .img-bx img {
+  width: 100%;
+}
+
+/* pricing */
+#pricing .row {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+#pricing .row .card {
+  border: 0.5px solid #595959;
+  transition: 0.3s;
+  width: 30%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#pricing .row .card .card-header {
+  background-color: #f5f5f5;
+  padding: 0.5rem 1rem;
+  font-family: Poppins;
+  font-size: 1.8rem;
+  border-bottom: 0.5px solid #595959;
+}
+#pricing .row .card .card-body {
+  padding: 1rem;
+}
+
+#pricing .row .card .card-body h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+#pricing .row .card .card-body p {
+  margin-bottom: 1rem;
+}
+
+#pricing .card:hover {
+  transform: scale(1.1);
+  border: none;
+  box-shadow: 0 0 10px 0 #595959;
+}
+/* footer */
+
+#footer a {
+  color: #333;
+  margin: 0 1rem;
+  transition: 0.3s;
+}
+#footer i {
+  font-size: 1.5rem;
+}
+#footer p {
+  margin-top: 1rem;
+}
+
+#footer a:hover {
+  color: rgb(211, 90, 110);
+  transform: scale(1.2);
+  text-shadow: -1px -1px 1px #000;
+}

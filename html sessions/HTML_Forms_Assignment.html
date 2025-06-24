@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>HTML FORMS</title>
+    <style>
+        h2 span {
+            color: red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>HTML <span> FORMS</span>
+    </h2>
+    <form>
+        <div>
+            <label for="fName">Full Name : </label>
+            <input type="text" id="fName" placeholder="Enter Full Name">
+        </div>
+        <div>
+            <label for="email">Email Address : </label>
+            <input type="email" id="email" placeholder="Enter Email Address">
+        </div>
+        <div>
+            <label for="pass">Full Name : </label>
+            <input type="password" id="pass" placeholder="Enter Password">
+        </div>
+        <div>
+            <label for="mob">Mobile : </label>
+            <input type="tel" id="mob" placeholder="Enter Mobile No.">
+        </div>
+        <div>
+            <label for="dob">Date of Birth : </label>
+            <input type="date" id="dob">
+        </div>
+        <div>
+            Gender :
+            <input type="radio" id="g_m" name="gender" value="male">
+            <label for="g_m">Male</label>
+            <input type="radio" id="g_f" name="gender" value="female">
+            <label for="g_f">Female</label>
+            <input type="radio" id="g_o" name="gender" value="others">
+            <label for="g_o">Others</label>
+        </div>
+        <div>
+            Skills :
+            <input type="checkbox" id="html" name="skills" value="html">
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="skills" value="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="js" name="skills" value="javascript">
+            <label for="js">Javascript</label>
+        </div>
+        <div>
+            <label for="pp">Profile Picture</label>
+            <input type="file" id="pp" name="profile_picture">
+        </div>
+        <div>
+            <label for="bio">Bio : </label><br />
+            <textarea name="bio" id="bio" placeholder="Enter Bio Data" rows="10" cols="30"></textarea>
+        </div>
+        <div>
+            <label for="exp">Experience : </label>
+            <input type="range" name="experience" value="1" step="1" id="exp" min="1" max="10">
+        </div>
+        <div>
+            <label for="pwu">Personal Website URL : </label>
+            <input type="url" name="personal_website_url" id="pwu" placeholder="Enter url">
+        </div>
+        <div>
+            <label for="pt">Preffered Time : </label>
+            <input type="time" name="preffered_time" id="pt">
+        </div>
+        <div>
+            <input type="checkbox" id="terms" name="terms" value="agree">
+            <label for="terms">I Agree to terms and conditions</label>
+        </div>
+    </form>
+
+
+    <div></div>
+</body>
+
+</html>

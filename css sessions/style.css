@@ -1,0 +1,122 @@
+/* Importing the "Poppins" font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Resetting margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling paragraphs */
+p {
+  color: #333 !important; /* Setting text color to dark gray */
+  margin-bottom: 16px; /* Adding space below paragraphs */
+  font-family: Arial, Helvetica, sans-serif; /* Defining font */
+}
+
+/* Styling headings (h1 to h6) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem; /* Adding space below headings */
+  font-family: Poppins; /* Applying imported font */
+  letter-spacing: 4px; /* Increasing space between letters */
+}
+
+/* Styling common wrapper class */
+.wrapper {
+  padding: 64px 128px; /* Padding inside the wrapper */
+  text-align: center; /* Centering text */
+  margin: 32px; /* Margin around the wrapper */
+}
+
+/* Styling level-2 headings */
+.level-2 {
+  font-size: 42px; /* Setting font size */
+  font-weight: 500; /* Making text semi-bold */
+  text-shadow: -2px -2px 2px #a4a4a4; /* Adding a light shadow effect */
+}
+
+/* Styling the #main section */
+#main {
+  box-shadow: 0 0 10px 2px #000; /* Adding a shadow around the div */
+  border-radius: 10px; /* Rounding the corners */
+  color: #fff; /* Setting text color to white */
+
+  /* Setting a background image with an overlay effect */
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(./images/bgc.jpg);
+  background-repeat: no-repeat; /* Prevent repeating the background */
+  background-size: cover; /* Cover the entire div */
+  background-position: right bottom; /* Positioning the background */
+}
+
+/* Styling paragraphs inside #main */
+#main p {
+  line-height: 1.5; /* Adjusting line height for readability */
+}
+
+/* Styling images inside #main */
+#main img {
+  box-shadow: -4px -4px 4px 0 #000; /* Adding shadow effect */
+  width: 150px; /* Fixing width */
+  height: 150px; /* Fixing height */
+  border-radius: 50%; /* Making it circular */
+}
+
+/* Styling buttons inside #main */
+#main button {
+  box-shadow: -4px -4px 4px 0 #000; /* Adding shadow */
+  padding: 10px 12px; /* Adding padding */
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  border-radius: 4px; /* Rounding corners */
+  border-color: transparent; /* Removing border color */
+}
+
+/* Styling the contact section */
+#contact {
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+  background-color: #f5f5f5;
+  color: teal; /* Changing text color to teal */
+}
+
+/* Styling the contact link */
+#contact a {
+  display: block; /* Making it a block element */
+  color: #fff; /* White text */
+  width: 15%; /* Setting width */
+  margin: auto; /* Centering the button */
+  padding: 12px 12px; /* Adding padding */
+  border-radius: 20px; /* Making rounded corners */
+  text-decoration: none; /* Removing underline */
+  box-shadow: -2px -2px 2px #000; /* Adding shadow */
+  font-family: Arial, Helvetica, sans-serif; /* Font */
+  background: linear-gradient(
+    45deg,
+    teal,
+    rgb(0, 186, 186)
+  ); /* Gradient background */
+  transition: 0.3s; /* Smooth hover transition */
+}
+
+/* Styling heading inside contact */
+#contact h4 {
+  font-size: 28px; /* Font size */
+  font-weight: 400; /* Regular weight */
+  text-shadow: -2px -2px 2px #a4a4a4; /* Adding shadow */
+}
+
+/* Adding hover effect for the contact link */
+#contact a:hover {
+  width: 20%; /* Expanding width */
+  background: linear-gradient(
+    -45deg,
+    teal,
+    rgb(0, 186, 186)
+  ); /* Changing gradient */
+}

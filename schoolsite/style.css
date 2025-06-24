@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins";
+}
+
+p {
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.level-2 {
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+.level-4 {
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: rgb(42, 161, 161);
+}
+
+.wrapper {
+  text-align: center;
+  padding: 8rem;
+}
+#features .feature {
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+#features .feature i {
+  transition: 0.3s;
+  font-size: 4rem;
+  color: rgb(42, 161, 161);
+  margin-bottom: 1rem;
+}
+#features .feature p {
+  margin: 0;
+}
+
+#features .feature:hover {
+  box-shadow: 0 0 4px #595959;
+}
+
+#features .feature:hover i {
+  text-shadow: -2px -2px 2px #595959;
+  transform: rotate(-25deg);
+}
+
+/* banner */
+#banner {
+  text-align: left !important;
+}
+#banner img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#banner .feature-icon-bx {
+  display: flex;
+  height: 150px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 4px #9d9d9d;
+}
+#banner .feature-icon-bx i {
+  font-size: 3rem;
+  color: teal;
+}
+/* newsletter */
+
+#newsletter {
+  margin: 8rem;
+  padding: 4rem;
+  background-color: #f5f5f5;
+}
+
+#newsletter .newsletter-form {
+  border: 1px solid teal;
+  background-color: #fff;
+  border-radius: 4px;
+}
+#newsletter .newsletter-form .col-lg-4,
+#newsletter .newsletter-form .col-lg-8 {
+  padding: 0;
+}
+#newsletter .newsletter-form input {
+  padding-left: 1rem;
+  width: 100%;
+  border: none;
+}
+#newsletter .newsletter-form button {
+  width: 92%;
+  background-color: teal;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border-color: transparent;
+}
+
+/* reviews */
+
+#reviews .card {
+  overflow: hidden;
+  border: none;
+}
+#reviews .card .col-lg-3 img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+#reviews .card .col-lg-9 .card-body {
+  padding: 2rem;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  box-shadow: 0 0 10px #ccc;
+  text-align: left;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+  padding: 20px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  padding: 20px;
+}
+
+/* maps */
+#map {
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 40vh;
+}
