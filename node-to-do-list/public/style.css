@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.task_name{
+    text-align: left;
+    width:70%;
+}
+.task_status{
+    text-align: left;
+    width:20%;
+}
