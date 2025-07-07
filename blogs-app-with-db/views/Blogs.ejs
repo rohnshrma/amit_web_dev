@@ -1,0 +1,17 @@
+<%- include("./partials/Header.ejs") -%>
+
+<!-- main -->
+<div class="container bg-light text-dark p-4">
+  <h1>Blogs</h1>
+  <hr />
+  <%if (typeof data === typeof []){ %> <% data.forEach((dataObj)=>{ %>
+  <div class="blog">
+    <h2><%= dataObj.title %></h2>
+    <p><%= dataObj.content %></p>
+  </div>
+  <% }) %> <% }else{ %>
+  <h2 class="text-center">No Blogs Found</h2>
+  <% } %>
+</div>
+
+<%- include("./partials/Footer.ejs") -%>

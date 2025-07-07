@@ -1,0 +1,28 @@
+<%- include("./partials/Header.ejs") -%>
+
+<!-- main -->
+<div class="container bg-light text-dark p-4">
+  <h1>Add New Blog</h1>
+  <form action="/compose" method="post">
+    <div class="form-group">
+      <input
+        type="text"
+        name="title"
+        placeholder="Blog Title..."
+        class="title form-control"
+      />
+    </div>
+    <div class="form-group">
+      <textarea
+        name="content"
+        placeholder="Blog Content..."
+        class="content form-control"
+        rows="4"
+        cols="30"
+      ></textarea>
+    </div>
+    <button class="btn btn-success btn-block">ADD BLOG</button>
+  </form>
+</div>
+
+<%- include("./partials/Footer.ejs") -%>
