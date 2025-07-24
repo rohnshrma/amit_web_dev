@@ -4,7 +4,6 @@ import express from "express";
 
 import connectDB from "./config/db.js";
 import routes from "./routes/routes.js";
-import md5 from "md5";
 import dotenv from "dotenv";
 
 const app = express();

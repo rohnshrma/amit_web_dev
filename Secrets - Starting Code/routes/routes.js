@@ -1,7 +1,6 @@
 import { Router } from "express";
 import User from "../models/User.js";
-import md5 from "md5";
-
+import bcrypt from "bcryptjs";
 const router = Router();
 
 router.route("/").get((req, res) => {
@@ -19,9 +18,13 @@ router
       const existingUser = await User.findOne({ username });
       if (existingUser) return res.redirect("/register");
 
+      // bcrypt start
+      const encrypted_pass = await bcrypt.hash(password, 10);
+      console.log(encrypted_pass);
+      // bcrypt end
       const user = new User({
         username,
-        password: md5(password),
+        password: encrypted_pass,
       });
 
       await user.save();
@@ -46,7 +49,11 @@ router
         return res.redirect("/register");
       }
 
-      if (existingUser.password === md5(password)) {
+      // bcrypt start
+      const isCorrect = await bcrypt.compare(password, existingUser.password);
+      // bcrypt end
+
+      if (isCorrect) {
         res.render("secrets");
       } else {
         console.log("incorrect password");
