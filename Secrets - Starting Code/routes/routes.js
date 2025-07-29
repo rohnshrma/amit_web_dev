@@ -51,6 +51,7 @@ router
 
       // bcrypt start
       const isCorrect = await bcrypt.compare(password, existingUser.password);
+      console.log("login => ", isCorrect, existingUser);
       // bcrypt end
 
       if (isCorrect) {
