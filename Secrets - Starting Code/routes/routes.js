@@ -1,36 +1,55 @@
 import { Router } from "express";
 import User from "../models/User.js";
-import bcrypt from "bcryptjs";
+import passport from "passport";
+
 const router = Router();
+
+function isAuthenticated(req, res, next) {
+  console.log("checking auth");
+
+  console.log(req.isAuthenticated());
+
+  if (req.isAuthenticated()) {
+    return next();
+  }
+
+  req.flash("error", "Please Login to view this page.");
+  res.redirect("/login");
+}
 
 router.route("/").get((req, res) => {
   res.render("home");
 });
+
 router
   .route("/register")
   .get((req, res) => {
     res.render("register");
   })
-  .post(async (req, res) => {
+  .post(async (req, res, next) => {
     try {
       const { username, password } = req.body;
 
       const existingUser = await User.findOne({ username });
-      if (existingUser) return res.redirect("/register");
+      if (existingUser) {
+        req.flash("error", "Username aleady exists.");
+        return res.redirect("/register");
+      }
 
-      // bcrypt start
-      const encrypted_pass = await bcrypt.hash(password, 10);
-      console.log(encrypted_pass);
-      // bcrypt end
       const user = new User({
         username,
-        password: encrypted_pass,
+        password,
       });
 
       await user.save();
-      res.render("secrets");
+
+      req.login(user, (err) => {
+        if (err) return next(err);
+        res.redirect("/secrets");
+      });
     } catch (err) {
       console.log("failed to create user ", err);
+      req.flash("error", "Registration failed. Please Try Again.");
       res.redirect("/register");
     }
   });
@@ -39,31 +58,24 @@ router
   .get((req, res) => {
     res.render("login");
   })
-  .post(async (req, res) => {
-    try {
-      const { username, password } = req.body;
+  .post(
+    passport.authenticate("local", {
+      successRedirect: "/secrets",
+      failureRedirect: "/login",
+      failureFlash: true,
+    })
+  );
 
-      const existingUser = await User.findOne({ username });
-      if (!existingUser) {
-        console.log("user not exists");
-        return res.redirect("/register");
-      }
+router.get("/secrets", isAuthenticated, (req, res) => {
+  res.render("secrets");
+});
 
-      // bcrypt start
-      const isCorrect = await bcrypt.compare(password, existingUser.password);
-      console.log("login => ", isCorrect, existingUser);
-      // bcrypt end
-
-      if (isCorrect) {
-        res.render("secrets");
-      } else {
-        console.log("incorrect password");
-        res.redirect("/login");
-      }
-    } catch (err) {
-      console.log("failed to create user ", err);
-      res.redirect("/register");
-    }
+router.get("/logout", (req, res, next) => {
+  req.logout((err) => {
+    if (err) return next(err);
+    req.flash("success", "Successfully logged out");
+    res.redirect("/");
   });
+});
 
 export default router;

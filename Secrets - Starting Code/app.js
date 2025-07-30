@@ -4,8 +4,9 @@ import express from "express";
 import session from "express-session";
 import User from "./models/User.js";
 import passport from "passport";
-import { Strategy as LocalStartegy } from "passport-local";
+import { Strategy as LocalStrategy } from "passport-local";
 import connectDB from "./config/db.js";
+import flash from "connect-flash";
 import routes from "./routes/routes.js";
 import dotenv from "dotenv";
 
@@ -29,18 +30,19 @@ app.use(
   })
 );
 
+app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
 passport.use(
-  new LocalStartegy(async (username, password, cb) => {
+  new LocalStrategy(async (username, password, cb) => {
     try {
       const user = await User.findOne({ username });
       if (!user) {
         return cb(null, false, { message: "incorrect username" });
       }
 
-      const isMatch = user.comparePassword(password);
+      const isMatch = await user.comparePassword(password);
       if (!isMatch) {
         return cb(null, false, { message: "incorrect password" });
       }
@@ -65,6 +67,12 @@ passport.deserializeUser(async (id, cb) => {
   }
 });
 
+app.use((req, res, next) => {
+  res.locals.error = req.flash("error");
+  res.locals.success = req.flash("success");
+  res.locals.user = req.user || null;
+  next();
+});
 // routes
 app.use(routes);
 

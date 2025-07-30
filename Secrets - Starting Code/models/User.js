@@ -1,14 +1,9 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
-const userSchema = new mongoose.Schema(
-  {
-    username: { type: String, required: true, unique: true, minLength: 8 },
-    password: { type: String, required: true, minLength: 8 },
-  },
-  {
-    timeseries: true,
-  }
-);
+const userSchema = new mongoose.Schema({
+  username: { type: String, required: true, unique: true, minLength: 8 },
+  password: { type: String, required: true, minLength: 8 },
+});
 
 userSchema.pre("save", async function (next) {
   if (this.isModified("password")) {
