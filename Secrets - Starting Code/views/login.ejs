@@ -1,32 +1,43 @@
+<!-- Include the header partial -->
 <%- include('partials/header') %>
 
+<!-- Main container with margin-top (mt-5) for spacing -->
 <div class="container mt-5">
+  <!-- Page heading -->
   <h1>Login</h1>
 
+  <!-- Check if there's an error message (from req.flash) and display it in red -->
   <% if (error){%>
   <p style="color: Red"><%= error %></p>
   <%}%>
 
   <div class="row">
+    <!-- Column taking 8/12 of the width (Bootstrap grid system) -->
     <div class="col-sm-8">
       <div class="card">
         <div class="card-body">
-          <!-- Makes POST request to /login route -->
+          <!-- Form that sends a POST request to /login -->
           <form action="/login" method="POST">
             <div class="form-group">
+              <!-- Label for the email input -->
               <label for="email">Email</label>
+              <!-- Input field for the username (treated as email) -->
               <input type="email" class="form-control" name="username" />
             </div>
             <div class="form-group">
+              <!-- Label for the password input -->
               <label for="password">Password</label>
+              <!-- Input field for the password -->
               <input type="password" class="form-control" name="password" />
             </div>
+            <!-- Submit button for the form -->
             <button type="submit" class="btn btn-dark">Login</button>
           </form>
         </div>
       </div>
     </div>
 
+    <!-- Commented-out section for Google login (not currently used) -->
     <!-- <div class="col-sm-4">
       <div class="card">
         <div class="card-body">
@@ -40,4 +51,5 @@
   </div>
 </div>
 
+<!-- Include the footer partial -->
 <%- include('partials/footer') %>

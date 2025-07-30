@@ -1,16 +1,23 @@
+<!-- Include the header partial (e.g., header.ejs) for consistent navigation -->
 <%- include('partials/header') %>
 
-
+<!-- A jumbotron is a large, styled container for important content -->
 <div class="jumbotron centered">
   <div class="container">
+    <!-- Display a key icon using Font Awesome -->
     <i class="fas fa-key fa-6x"></i>
+    <!-- Main heading for the page -->
     <h1 class="display-3">Secrets</h1>
+    <!-- Lead paragraph describing the page -->
     <p class="lead">Don't keep your secrets, share them anonymously!</p>
-    <hr>
+    <!-- Horizontal rule for visual separation -->
+    <hr />
+    <!-- Button linking to the registration page -->
     <a class="btn btn-light btn-lg" href="/register" role="button">Register</a>
+    <!-- Button linking to the login page -->
     <a class="btn btn-dark btn-lg" href="/login" role="button">Login</a>
-
   </div>
 </div>
 
+<!-- Include the footer partial (e.g., footer.ejs) -->
 <%- include('partials/footer') %>
