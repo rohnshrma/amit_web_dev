@@ -98,6 +98,27 @@ router
     })
   );
 
+// Route to initiate Google OAuth authentication
+router.get(
+  "/auth/google",
+  // Start Google authentication, requesting access to user's profile and email
+  passport.authenticate("google", { scope: ["profile", "email"] })
+);
+
+// Route to handle Google OAuth callback
+router.get(
+  "/auth/google/callback",
+  // Process the Google authentication response
+  passport.authenticate("google", {
+    // If authentication succeeds, redirect to the secrets page
+    successRedirect: "/secrets",
+    // If authentication fails, redirect to the login page
+    failureRedirect: "/login",
+    // Enable flash messages for Google authentication errors
+    failureFlash: { type: "error", message: "Google Authentication Failed" },
+  })
+);
+
 // Route for the /secrets page (requires authentication)
 router.get("/secrets", isAuthenticated, (req, res) => {
   // Render the "secrets" template if the user is authenticated
