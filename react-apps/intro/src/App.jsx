@@ -1,7 +1,9 @@
 import Card from "./Components/Card";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Counter from "./Components/Counter";
 import Timer from "./Components/Timer";
+import Form from "./Components/Form";
 // import { data } from "./data";
 
 const App = () => {
@@ -23,9 +25,9 @@ const App = () => {
             />
           );
         })} */}
-
-        <Counter />
-        <Timer />
+        {/*     <Counter />
+        <Timer /> */}
+        <Form />
       </div>
     </div>
   );
