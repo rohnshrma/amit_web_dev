@@ -13,23 +13,14 @@ const Form = () => {
     mobile: "",
   });
 
-  const nameChangeHandler = (e) => {
-    var nameInput = e.target.value;
+  const changeHandler = (e) => {
+    var { name, value } = e.target;
+    console.log(name, value);
     setFormData((prevData) => {
       console.log("prevData => ", prevData);
       return {
-        name: nameInput,
-        mobile: prevData.mobile,
-      };
-    });
-  };
-  const mobileChangeHandler = (e) => {
-    var mobileInput = e.target.value;
-    setFormData((prevData) => {
-      console.log("prevData => ", prevData);
-      return {
-        name: prevData.name,
-        mobile: mobileInput,
+        ...prevData,
+        [name]: value,
       };
     });
   };
@@ -52,7 +43,8 @@ const Form = () => {
             type="text"
             className="form-control"
             placeholder="enter your name"
-            onChange={nameChangeHandler}
+            onChange={changeHandler}
+            name="name"
           />
         </div>
         <div>
@@ -60,7 +52,8 @@ const Form = () => {
             type="tel"
             className="form-control"
             placeholder="enter your number"
-            onChange={mobileChangeHandler}
+            onChange={changeHandler}
+            name="mobile"
           />
         </div>
 
