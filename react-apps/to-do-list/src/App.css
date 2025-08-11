@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(45deg, tan 50%, rgb(153, 112, 175) 50%);
+}
+
+.formarea {
+  border-radius: 10px;
+  box-shadow: 0 0 4px grey;
+  padding: 2rem;
+  width: 50%;
+  margin: 4rem auto;
+  background-color: #fff;
+}
+
+.formarea input.form-control {
+  width: 100%;
+}
