@@ -2,32 +2,47 @@ import React, { useState } from "react";
 
 const Form = () => {
   // onchange
-  const [nameText, setNameText] = useState("");
-  const [mobileText, setMobileText] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    mobile: "",
+  });
 
   // onsubmit
-  const [finalName, setFinalName] = useState("Text Goes Here");
-  const [finalMobile, setFinalMobile] = useState("Text Goes Here");
+  const [finalData, setFinalData] = useState({
+    name: "",
+    mobile: "",
+  });
 
   const nameChangeHandler = (e) => {
     var nameInput = e.target.value;
-    setNameText(nameInput);
+    setFormData((prevData) => {
+      console.log("prevData => ", prevData);
+      return {
+        name: nameInput,
+        mobile: prevData.mobile,
+      };
+    });
   };
   const mobileChangeHandler = (e) => {
     var mobileInput = e.target.value;
-    setMobileText(mobileInput);
+    setFormData((prevData) => {
+      console.log("prevData => ", prevData);
+      return {
+        name: prevData.name,
+        mobile: mobileInput,
+      };
+    });
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    setFinalName(nameText);
-    setFinalMobile(mobileText);
+    setFinalData(formData);
   };
 
   return (
     <div className="form border shadow-sm rounded p-5">
-      <h2>{finalName}</h2>
-      <p>{finalMobile}</p>
+      <h2>{finalData.name}</h2>
+      <p>{finalData.mobile}</p>
 
       <hr />
 
