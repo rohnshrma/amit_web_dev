@@ -8,7 +8,7 @@ const FormArea = (props) => {
 
   const changeHandler = (e) => {
     const { name, value } = e.target;
-
+    console.log(name, value);
     setFormData((prevData) => {
       return {
         ...prevData,
@@ -20,6 +20,10 @@ const FormArea = (props) => {
   const submitHandler = (e) => {
     e.preventDefault();
     props.onAdd(formData);
+    setFormData({
+      title: "",
+      status: "pending",
+    });
   };
 
   return (
@@ -32,9 +36,11 @@ const FormArea = (props) => {
           <input
             type="text"
             name="title"
+            required
             placeholder="Enter Task Name"
             className="form-control"
             onChange={changeHandler}
+            value={formData.title}
           />
         </div>
         <div>
@@ -42,9 +48,10 @@ const FormArea = (props) => {
             name="status"
             onChange={changeHandler}
             className="form-select"
+            value={formData.status}
           >
-            <option value="Pending">Pending</option>
-            <option value="Completed">Completed</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
           </select>
         </div>
         <button className="btn btn-dark" type="submit">
