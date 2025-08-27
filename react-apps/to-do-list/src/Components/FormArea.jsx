@@ -1,29 +1,50 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
+
+const initialState = {
+  title: "",
+  status: "pending",
+};
+
+const taskReducer = (state, action) => {
+  console.log("action=>", action);
+  console.log("prev state=>", state);
+
+  if (action.type === "titleCHANGE") {
+    return {
+      title: action.payload,
+      status: state.status,
+    };
+  }
+
+  if (action.type === "statusCHANGE") {
+    return {
+      title: state.title,
+      status: action.payload,
+    };
+  }
+  if (action.type === "RESET") {
+    return {
+      title: "",
+      status: "pending",
+    };
+  }
+
+  return state;
+};
 
 const FormArea = (props) => {
-  const [formData, setFormData] = useState({
-    title: "",
-    status: "pending",
-  });
+  const [formData, dispatch] = useReducer(taskReducer, initialState);
 
   const changeHandler = (e) => {
     const { name, value } = e.target;
     console.log(name, value);
-    setFormData((prevData) => {
-      return {
-        ...prevData,
-        [name]: value,
-      };
-    });
+    dispatch({ type: `${name}CHANGE`, payload: value });
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
     props.onAdd(formData);
-    setFormData({
-      title: "",
-      status: "pending",
-    });
+    dispatch({ type: "RESET" });
   };
 
   return (
