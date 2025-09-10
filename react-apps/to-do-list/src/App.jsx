@@ -9,8 +9,6 @@ import Button from "./Components/Button";
 import TasksContext from "./context";
 
 function App() {
-  const [tasks, setTasks] = useState([]);
-
   const { theme } = useContext(TasksContext);
 
   var properties = {
@@ -27,26 +25,11 @@ function App() {
     right: "10px",
   };
 
-  const addTaskHandler = (taskObj) => {
-    console.log("New Task", taskObj);
-    setTasks((prevTasks) => {
-      return [...prevTasks, taskObj];
-    });
-  };
-
-  const deleteTaskHandler = (id) => {
-    setTasks((prevTasks) => {
-      return prevTasks.filter((tasks, index) => {
-        return index !== id;
-      });
-    });
-  };
-
   return (
     <div className="app" style={properties}>
-      <FormArea onAdd={addTaskHandler} />
+      <FormArea />
 
-      <Tasks tasks={tasks} onDelete={deleteTaskHandler} />
+      <Tasks />
 
       <Button
         text={theme === "light" ? <FaMoon /> : <FaSun />}

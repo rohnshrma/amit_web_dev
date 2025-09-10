@@ -3,8 +3,8 @@ import Task from "./Task";
 import TasksContext from "../context";
 import { useContext } from "react";
 
-const Tasks = ({ tasks, onDelete }) => {
-  const { theme } = useContext(TasksContext);
+const Tasks = () => {
+  const { theme, tasks } = useContext(TasksContext);
 
   const properties = {
     backgroundColor: theme === "light" ? "#fff" : "#333",
@@ -19,13 +19,7 @@ const Tasks = ({ tasks, onDelete }) => {
         tasks
           .reverse()
           .map((taskObj, index) => (
-            <Task
-              theme={theme}
-              data={taskObj}
-              key={index}
-              id={index}
-              onDelete={onDelete}
-            />
+            <Task theme={theme} data={taskObj} key={index} id={index} />
           ))
       )}
     </div>

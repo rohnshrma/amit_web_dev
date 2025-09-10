@@ -4,8 +4,8 @@ import { FaTrashAlt } from "react-icons/fa";
 import TasksContext from "../context";
 import { useContext } from "react";
 
-const Task = ({ data, id, onDelete }) => {
-  const { theme } = useContext(TasksContext);
+const Task = ({ data, id }) => {
+  const { theme, deleteTaskHandler } = useContext(TasksContext);
 
   const properties = {
     backgroundColor: theme === "light" ? "#fff" : "#333",
@@ -28,7 +28,7 @@ const Task = ({ data, id, onDelete }) => {
       <button
         className="btn btn-sm btn-danger"
         onClick={() => {
-          onDelete(id);
+          deleteTaskHandler(id);
         }}
       >
         <FaTrashAlt />

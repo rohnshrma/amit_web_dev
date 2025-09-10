@@ -35,8 +35,8 @@ const taskReducer = (state, action) => {
   return state;
 };
 
-const FormArea = ({ onAdd }) => {
-  const { theme } = useContext(TasksContext);
+const FormArea = () => {
+  const { theme, addTaskHandler } = useContext(TasksContext);
 
   const [formData, dispatch] = useReducer(taskReducer, initialState);
 
@@ -53,7 +53,7 @@ const FormArea = ({ onAdd }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    onAdd(formData);
+    addTaskHandler(formData);
     dispatch({ type: "RESET" });
   };
 
