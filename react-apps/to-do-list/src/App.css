@@ -13,26 +13,28 @@ h6 {
 }
 
 body {
-  height: 100vh;
   background: linear-gradient(45deg, tan 50%, rgb(153, 112, 175) 50%);
+}
+
+.app {
+  padding-top: 4rem;
+  margin-top: 0;
+  min-height: 100vh;
 }
 
 .formarea {
   border-radius: 10px;
-  box-shadow: 0 0 4px grey;
   padding: 2rem;
   width: 50%;
-  margin: 4rem auto;
-  background-color: #fff;
+  margin: 0rem auto 4rem;
 }
 
-.formarea input.form-control {
+.formarea input {
   width: 100%;
 }
 
 .tasksList {
   padding: 2rem;
-  background-color: #fff;
   margin: auto;
   width: 60%;
 }

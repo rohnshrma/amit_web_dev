@@ -1,5 +1,8 @@
 import React, { useReducer } from "react";
 
+import TasksContext from "../context";
+import { useContext } from "react";
+
 const initialState = {
   title: "",
   status: "pending",
@@ -32,8 +35,15 @@ const taskReducer = (state, action) => {
   return state;
 };
 
-const FormArea = (props) => {
+const FormArea = ({ onAdd }) => {
+  const { theme } = useContext(TasksContext);
+
   const [formData, dispatch] = useReducer(taskReducer, initialState);
+
+  const form_properties = {
+    backgroundColor: theme === "light" ? "#fff" : "#333",
+    color: theme === "light" ? "#333" : "#fff",
+  };
 
   const changeHandler = (e) => {
     const { name, value } = e.target;
@@ -43,12 +53,12 @@ const FormArea = (props) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    props.onAdd(formData);
+    onAdd(formData);
     dispatch({ type: "RESET" });
   };
 
   return (
-    <div className="formarea">
+    <div className="formarea shadow-lg" style={form_properties}>
       <form
         onSubmit={submitHandler}
         className="d-flex justify-content-evenly align-items-center "
