@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartProvider } from "../CartContext.jsx";
+import CartContext from "../CartContext.jsx";
 
 const Dish = ({ dish }) => {
-  const { name, image, vegNonVeg, description, subCategory, price } = dish;
+  const { addToCartHandler } = useContext(CartContext);
+
+  const { id, name, image, vegNonVeg, description, subCategory, price } = dish;
   return (
     <div className="col-lg-4 col-md-6 col-sm-12">
-      <div className="card shadow-lg border-0 rounded-4">
+      <div className="card shadow-lg border-0 rounded-4 m-3">
         <img
           src={image}
           className="card-img-top rounded-top-4 dish-image"
@@ -14,7 +18,7 @@ const Dish = ({ dish }) => {
           <div className="d-flex align-items-center justify-content-between">
             <h5 className="card-title fw-bold">{name}</h5>
             <span
-              className={`badge ${
+              className={`text-light badge ${
                 vegNonVeg === "veg" ? "bg-success" : "bg-danger"
               } mb-2 fs-6`}
             >
@@ -28,21 +32,18 @@ const Dish = ({ dish }) => {
             <span className="fw-bold text-danger fs-5">₹{price}</span>
             <button
               className="btn btn-outline-danger"
-              //   onClick={() => {
-              //     console.log("clicked");
-              //     dispatch({
-              //       type: "ADD_ITEM",
-              //       payload: {
-              //         name,
-              //         id,
-              //         subCategory,
-              //         price,
-              //         description,
-              //         vegNonVeg,
-              //         image,
-              //       },
-              //     });
-              //   }}
+              onClick={() => {
+                console.log("clicked");
+                addToCartHandler({
+                  name,
+                  id,
+                  subCategory,
+                  price,
+                  description,
+                  vegNonVeg,
+                  image,
+                });
+              }}
             >
               Add To Cart
             </button>

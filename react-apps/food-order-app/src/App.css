@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
 }
 h1,
 h2,
@@ -14,4 +15,10 @@ h6 {
   height: 200px;
   object-fit: cover;
   width: 100%;
+}
+
+#menu .col-lg-4,
+#menu .col-md-6,
+#menu .col-sm-12 {
+  padding: 0;
 }
