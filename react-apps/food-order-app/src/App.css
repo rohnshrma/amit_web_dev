@@ -11,6 +11,10 @@ h6 {
   margin: 0;
 }
 
+body {
+  background: #eee;
+}
+
 .dish-image {
   height: 200px;
   object-fit: cover;
@@ -21,4 +25,15 @@ h6 {
 #menu .col-md-6,
 #menu .col-sm-12 {
   padding: 0;
+}
+
+.cart-item {
+  background: #fff;
+}
+
+.cart-item .details {
+  width: 60%;
+}
+.cart-item .actions {
+  width: 40%;
 }

@@ -1,13 +1,17 @@
-import React from "react";
+import { useContext } from "react";
+import CartContext from "../CartContext";
 import { FaCartShopping } from "react-icons/fa6";
+
 const Header = () => {
+  const { cart } = useContext(CartContext);
+
   return (
     <div className="shadow bg-dark px-5 py-2 text-light d-flex justify-content-between align-items-center">
-      <h4>Fooodieee</h4>
-      <h5 className="badge badge-light">
+      <h2>Fooodieee</h2>
+      <h2 className="badge badge-light">
         <FaCartShopping />
-        Cart 0
-      </h5>
+        Cart {cart.cartItems.length}
+      </h2>
     </div>
   );
 };
