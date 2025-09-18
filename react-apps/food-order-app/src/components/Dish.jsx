@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { CartProvider } from "../CartContext.jsx";
 import CartContext from "../CartContext.jsx";
-
+import { useNavigate } from "react-router-dom";
 const Dish = ({ dish }) => {
+  const navigate = useNavigate();
   const { addToCartHandler } = useContext(CartContext);
 
   const { id, name, image, vegNonVeg, description, subCategory, price } = dish;
@@ -43,6 +43,7 @@ const Dish = ({ dish }) => {
                   vegNonVeg,
                   image,
                 });
+                navigate("/cart");
               }}
             >
               Add To Cart

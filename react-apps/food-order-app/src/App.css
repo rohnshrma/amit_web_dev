@@ -26,7 +26,9 @@ body {
 #menu .col-sm-12 {
   padding: 0;
 }
-
+#cart {
+  width: 100%;
+}
 .cart-item {
   background: #fff;
 }

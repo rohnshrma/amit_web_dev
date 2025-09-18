@@ -6,7 +6,7 @@ import CartItem from "./CartItem";
 const Cart = () => {
   const { cart } = useContext(CartContext);
   return (
-    <div id="cart" className="col-lg-4 p-3 border rounded shadow-sm bg-light">
+    <div id="cart" className="p-3 border rounded shadow-sm bg-light">
       <h2>
         Cart <FaShoppingCart />
         {cart.cartItems.length > 0 && (
